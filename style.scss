@@ -1,0 +1,66 @@
+:root {
+	--clr-white: #ffffff;
+	--clr-neon-blue: #62E0D9;
+	--clr-dark-blue: #1B2330;
+	--clr-gradient-blue: linear-gradient(#63E1D9, #34A0CD);
+}
+
+/*-------
+Reset
+-------*/
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 62.5%;
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+	background-color: var(--clr-dark-blue);
+	color: var(--clr-white);
+	font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+	padding: 8rem;
+}
+
+.nav {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		width: 17.6rem;
+	}
+
+	&__links {
+		display: flex;
+		font-size: 1.6rem;
+		gap: 5rem;
+	}
+
+	&__item {
+		list-style-type: none;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+}
