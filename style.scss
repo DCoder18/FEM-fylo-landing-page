@@ -3,6 +3,23 @@
 	--clr-neon-blue: #62E0D9;
 	--clr-dark-blue: #1B2330;
 	--clr-gradient-blue: linear-gradient(#63E1D9, #34A0CD);
+
+  --fs-700: 4rem;
+  --fs-600: 3.2rem;
+  --fs-500: 2rem;
+  --fs-400: 1.6rem;
+  --fs-300: 1.4rem;
+  --fs-200: 1rem;
+  --fs-100: 0.8rem;
+
+  @media ( max-width: 35em) {
+    --fs-700: 2.4rem;
+    --fs-400: 1.4rem;
+    --fs-300: 1rem;
+  }
+
+  --ff-primary: 'Raleway', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
 }
 
 /*-------
@@ -25,17 +42,25 @@ html, body {
 }
 
 img {
+  display: block;
   width: 100%;
 }
 
 body {
 	background-color: var(--clr-dark-blue);
 	color: var(--clr-white);
-	font-family: 'Raleway', sans-serif;
+	font-family: var(--ff-primary);
+  text-align: center;
+  font-size: var(--fs-400);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .wrapper {
-	padding: 8rem;
+	padding: 7rem 8rem;
 }
 
 .nav {
@@ -47,20 +72,109 @@ body {
 
 	&__logo {
 		width: 17.6rem;
+
+    @media ( max-width: 35em ) {
+      width: 8rem;
+    }
 	}
 
 	&__links {
 		display: flex;
 		font-size: 1.6rem;
 		gap: 5rem;
+
+    @media ( max-width: 35em ) {
+      width: 1.2rem;
+      gap: 2.4rem;
+    }
 	}
 
 	&__item {
 		list-style-type: none;
-
-		a {
-			text-decoration: none;
-			color: inherit;
-		}
 	}
 }
+
+.heading-primary {
+  font-size: var(--fs-700);
+  line-height: 6rem;
+  max-width: 70rem;
+}
+
+.heading-secondary {
+  font-size: var(--fs-500);
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 0;
+  margin: 0 auto;
+}
+
+.hero {
+  margin-bottom: 10rem;
+
+  &__img {
+    width: 72rem;
+  }
+
+  &__content {
+    font-size: var(--fs-400);
+    max-width: 48rem;
+    line-height: 3rem;
+    font-family: var(--ff-secondary);
+    margin: 3.2rem auto;
+  }
+}
+
+.benefits {
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 8rem;
+  }
+
+   &__img {
+    margin-bottom: 1.6rem;
+
+    &--access,
+    &--collab {
+      width: 8.4rem;
+    }
+
+    &--security {
+      width: 6.6rem;
+    }
+
+    &--files {
+      width: 9rem;
+    }
+   }
+
+   &__content {
+    font-size: var(--fs-300);
+    margin-top: 0.8rem;
+   }
+  }
+}
+
+.btn {
+  text-decoration: none;
+  padding: 1.8rem 9rem;
+  background-image: var(--clr-gradient-blue);
+  border-radius: 2.8rem;
+  display: inline-block;
+}
+
+
+
+ 
+
