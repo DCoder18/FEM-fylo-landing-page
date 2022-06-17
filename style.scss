@@ -54,6 +54,10 @@ body {
   font-size: var(--fs-400);
 }
 
+p {
+  font-family: var(--ff-secondary);
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -124,26 +128,29 @@ a {
     font-size: var(--fs-400);
     max-width: 48rem;
     line-height: 3rem;
-    font-family: var(--ff-secondary);
     margin: 3.2rem auto;
   }
 }
 
+
 .benefits {
+  margin-bottom: 10rem;
+
   .grid {
     display: grid;
     grid-template-columns: auto auto;
+    grid-gap: 10rem 8rem;
 
   .grid-item {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 8rem;
   }
 
    &__img {
-    margin-bottom: 1.6rem;
+    padding-bottom: 1.6rem;
+    vertical-align: middle;
 
     &--access,
     &--collab {
@@ -161,8 +168,55 @@ a {
 
    &__content {
     font-size: var(--fs-300);
-    margin-top: 0.8rem;
+    margin-top: 8px;
+    max-width: 38rem;
+    line-height: 21px;
    }
+  }
+}
+
+
+.productive {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rem;
+
+  &__img {
+    width: 61.5rem
+  }
+
+  &__container {
+   text-align: left;
+   max-width: 49rem;
+  }
+
+  .heading-primary {
+    line-height: 5rem;
+    margin-bottom: 2rem;
+  }
+  
+  &__content {
+    line-height: 2.4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  a {
+   color: var(--clr-neon-blue);
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 2rem;
+    position: relative;
+    top: 4px;
+  }
+
+  .underline {
+    width: 16.7rem;
+    height: 1px;
+    position: relative;
+    top: 3px;
+    background-color: var(--clr-neon-blue);
   }
 }
 

@@ -55,6 +55,10 @@ body {
   font-size: var(--fs-400);
 }
 
+p {
+  font-family: var(--ff-secondary);
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -145,8 +149,11 @@ a {
   font-size: var(--fs-400);
   max-width: 48rem;
   line-height: 3rem;
-  font-family: var(--ff-secondary);
   margin: 3.2rem auto;
+}
+
+.benefits {
+  margin-bottom: 10rem;
 }
 
 .benefits .grid {
@@ -154,15 +161,16 @@ a {
   display: grid;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
+  grid-gap: 10rem 8rem;
 }
 
 .benefits .grid .grid-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -170,11 +178,11 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 8rem;
 }
 
 .benefits .grid__img {
-  margin-bottom: 1.6rem;
+  padding-bottom: 1.6rem;
+  vertical-align: middle;
 }
 
 .benefits .grid__img--access, .benefits .grid__img--collab {
@@ -191,7 +199,57 @@ a {
 
 .benefits .grid__content {
   font-size: var(--fs-300);
-  margin-top: 0.8rem;
+  margin-top: 8px;
+  max-width: 38rem;
+  line-height: 21px;
+}
+
+.productive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10rem;
+}
+
+.productive__img {
+  width: 61.5rem;
+}
+
+.productive__container {
+  text-align: left;
+  max-width: 49rem;
+}
+
+.productive .heading-primary {
+  line-height: 5rem;
+  margin-bottom: 2rem;
+}
+
+.productive__content {
+  line-height: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.productive a {
+  color: var(--clr-neon-blue);
+}
+
+.productive__icon {
+  display: inline-block;
+  width: 2rem;
+  position: relative;
+  top: 4px;
+}
+
+.productive .underline {
+  width: 16.7rem;
+  height: 1px;
+  position: relative;
+  top: 3px;
+  background-color: var(--clr-neon-blue);
 }
 
 .btn {
