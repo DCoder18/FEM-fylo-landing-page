@@ -1,7 +1,8 @@
 :root {
   --clr-white: #ffffff;
   --clr-neon-blue: #62E0D9;
-  --clr-dark-blue: #1B2330;
+  --clr-dark-blue-1: #1B2330;
+  --clr-dark-blue-2: #1B2330;
   --clr-gradient-blue: linear-gradient(#63E1D9, #34A0CD);
   --fs-700: 4rem;
   --fs-600: 3.2rem;
@@ -250,6 +251,19 @@ a {
   position: relative;
   top: 3px;
   background-color: var(--clr-neon-blue);
+}
+
+.reviews .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  grid-column-gap: 4rem;
+}
+
+.reviews .grid .grid-item {
+  background-color: var(--clr-dark-blue-2);
+  border-radius: 4px;
 }
 
 .btn {
