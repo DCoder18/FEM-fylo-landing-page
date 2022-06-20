@@ -64,17 +64,12 @@ a {
   color: inherit;
 }
 
-.wrapper {
-	padding: 7rem 8rem;
-  max-width: 128rem;
-  margin: 0 auto;
-}
-
 .nav {
 	&__container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+    padding: 7rem 8rem;
 	}
 
 	&__logo {
@@ -121,6 +116,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 7rem 0;
+  max-width: 128rem;
   margin: 0 auto;
 }
 
@@ -321,6 +317,15 @@ a {
   font-family: inherit;
   font-size: var(--fs-400);
   font-weight: 700;
+}
+
+.footer {
+  background-color: #0B1524;
+  padding: 5rem 10rem;
+
+  &__logo {
+    width: 10rem;
+  }
 }
 
 
