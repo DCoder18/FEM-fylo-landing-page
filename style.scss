@@ -2,7 +2,7 @@
 	--clr-white: #ffffff;
 	--clr-neon-blue: #62E0D9;
 	--clr-dark-blue-1: #1B2330;
-	--clr-dark-blue-2: #1B2330;
+	--clr-dark-blue-2: #202A3C;
 	--clr-gradient-blue: linear-gradient(#63E1D9, #34A0CD);
 
   --fs-700: 4rem;
@@ -11,7 +11,7 @@
   --fs-400: 1.6rem;
   --fs-300: 1.4rem;
   --fs-200: 1rem;
-  --fs-100: 0.8rem;
+  --fs-100: 8px;
 
   @media ( max-width: 35em) {
     --fs-700: 2.4rem;
@@ -39,7 +39,7 @@ Reset
 
 html, body {
   font-size: 62.5%;
-  height: 100vh;
+  min-height: 100%;
 }
 
 img {
@@ -48,7 +48,7 @@ img {
 }
 
 body {
-	background-color: var(--clr-dark-blue);
+  background: center bottom 60% / contain no-repeat url('../images/bg-curvy-desktop.svg'), linear-gradient(to bottom, var(--clr-dark-blue-1) 50%, #181F2B 50%);
 	color: var(--clr-white);
 	font-family: var(--ff-primary);
   text-align: center;
@@ -135,23 +135,21 @@ a {
 
 
 .benefits {
+  display: grid;
   margin-bottom: 10rem;
+  grid-template-columns: auto auto;
+  grid-gap: 10rem 8rem;
 
-  .grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 10rem 8rem;
-
-  .grid-item {
+  &__item {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 
-   &__img {
+  &__img {
     padding-bottom: 1.6rem;
-    vertical-align: middle;
+    margin: 0 auto;
 
     &--access,
     &--collab {
@@ -165,7 +163,7 @@ a {
     &--files {
       width: 9rem;
     }
-   }
+  }
 
    &__content {
     font-size: var(--fs-300);
@@ -174,13 +172,13 @@ a {
     line-height: 21px;
    }
   }
-}
 
 
 .productive {
   display: flex;
   align-items: center;
   margin-bottom: 10rem;
+  gap: 6rem;
 
   &__img {
     width: 61.5rem
@@ -222,18 +220,42 @@ a {
 }
 
 .reviews {
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-column-gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-column-gap: 4rem;
 
-    .grid-item {
-      background-color: var(--clr-dark-blue-2);
-      border-radius: 4px;
-      // display: flex;
-      // justify-content: flex-start;
-      // align-items: center;
-      // flex-direction: column;
+  &__item {
+    background-color: var(--clr-dark-blue-2);
+    border-radius: 4px;
+    padding: 4rem 2.5rem 2.5rem;
+    text-align: left;
+  }
+
+  &__content {
+    font-size: var(--fs-300);
+    line-height: 21px;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    margin-top: 2.4rem;
+
+    &--img {
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    &--name {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    &--occupation {
+      font-size: 8px;
     }
   }
 }
