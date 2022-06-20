@@ -66,6 +66,8 @@ a {
 
 .wrapper {
 	padding: 7rem 8rem;
+  max-width: 128rem;
+  margin: 0 auto;
 }
 
 .nav {
@@ -107,6 +109,10 @@ a {
 
 .heading-secondary {
   font-size: var(--fs-500);
+}
+
+.heading-tertiary {
+  font-size: var(--fs-600);
 }
 
 .main__container {
@@ -177,7 +183,7 @@ a {
 .productive {
   display: flex;
   align-items: center;
-  margin-bottom: 10rem;
+  margin-bottom: 18rem;
   gap: 6rem;
 
   &__img {
@@ -223,12 +229,24 @@ a {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-column-gap: 4rem;
+  position: relative;
+  margin-bottom: 20rem;
+ 
+
+  &__quote {
+    width: 8rem;
+    position: absolute;
+    z-index: 1;
+    top: -48px;
+    left: -8px;
+  }
 
   &__item {
     background-color: var(--clr-dark-blue-2);
     border-radius: 4px;
     padding: 4rem 2.5rem 2.5rem;
     text-align: left;
+    z-index: 2;
   }
 
   &__content {
@@ -260,12 +278,49 @@ a {
   }
 }
 
+.register {
+  background-color: var(--clr-dark-blue-1);
+  border-radius: 9px;
+  box-shadow: 2px 3px 5px #000000;
+  padding: 4.2rem 7.7rem;
+  max-width: 86rem;
+
+  &__content {
+    font-size: var(--fs-300);
+    margin: 1.6rem 0 3.8rem;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    width: 48rem;
+    height: 4.8rem;
+    border-radius: 2.4rem;
+    margin-right: 2rem;
+    padding-left: 3.8rem;
+
+    ::placeholder {
+      color: #C0C0C0;
+    }
+  }
+
+  .btn {
+    padding: 1.5rem 2.6rem;
+    font-size: var(--fs-300);
+  }
+}
+
 .btn {
   text-decoration: none;
   padding: 1.8rem 9rem;
   background-image: var(--clr-gradient-blue);
   border-radius: 2.8rem;
   display: inline-block;
+  border: none;
+  color: var(--clr-white);
+  font-family: inherit;
+  font-size: var(--fs-400);
+  font-weight: 700;
 }
 
 
